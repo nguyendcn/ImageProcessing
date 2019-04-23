@@ -54,5 +54,10 @@ namespace DemoAlgoImageProcessing
                 this.pnl_ContainerFuncTranformations.Controls.Add(negative);
             }
         }
+
+        private void btn_Logarithmic_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

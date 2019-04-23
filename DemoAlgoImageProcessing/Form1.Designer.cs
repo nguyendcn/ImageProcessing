@@ -333,6 +333,7 @@
             this.btn_Logarithmic.TabIndex = 2;
             this.btn_Logarithmic.Text = "Logarithmic";
             this.btn_Logarithmic.UseVisualStyleBackColor = true;
+            this.btn_Logarithmic.Click += new System.EventHandler(this.btn_Logarithmic_Click);
             // 
             // btn_BitPlaneSlicing
             // 

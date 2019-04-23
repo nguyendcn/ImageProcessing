@@ -67,6 +67,7 @@
     </Compile>
     <Compile Include="Handing\BitmapExtenstion.cs" />
     <Compile Include="Handing\Histogram.cs" />
+    <Compile Include="Handing\Tranformations\Logarithmic.cs" />
     <Compile Include="Handing\Tranformations\Negative.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,11 +83,17 @@
     <Compile Include="UI\Tranformations\GrayLevelSlicing.Designer.cs">
       <DependentUpon>GrayLevelSlicing.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Tranformations\Logarithmic.cs">
+    <Compile Include="UI\Tranformations\Logarithmic\InputForLogarit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Tranformations\Logarithmic\InputForLogarit.Designer.cs">
+      <DependentUpon>InputForLogarit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Tranformations\Logarithmic\Logarithmics.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Tranformations\Logarithmic.Designer.cs">
-      <DependentUpon>Logarithmic.cs</DependentUpon>
+    <Compile Include="UI\Tranformations\Logarithmic\Logarithmics.Designer.cs">
+      <DependentUpon>Logarithmics.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Tranformations\Negative.cs">
       <SubType>UserControl</SubType>
@@ -125,6 +132,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Tranformations\Logarithmic\InputForLogarit.resx">
+      <DependentUpon>InputForLogarit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Tranformations\Logarithmic\Logarithmics.resx">
+      <DependentUpon>Logarithmics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Tranformations\Negative.resx">
       <DependentUpon>Negative.cs</DependentUpon>
     </EmbeddedResource>
