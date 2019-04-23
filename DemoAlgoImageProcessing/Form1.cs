@@ -32,5 +32,27 @@ namespace DemoAlgoImageProcessing
         {
 
         }
+
+        private void btn_Negative_Click(object sender, EventArgs e)
+        {
+            //Check is exists
+            bool isExist = false;
+            foreach(Control ctr in this.pnl_ContainerFuncTranformations.Controls)
+            {
+                if(ctr is UI.Tranformations.Negative)
+                {
+                    ctr.Visible = true;
+                    ctr.BringToFront();
+                    isExist = true;
+                }
+            }
+
+            if (!isExist)
+            {
+                UI.Tranformations.Negative negative = new UI.Tranformations.Negative();
+                negative.Dock = DockStyle.Fill;
+                this.pnl_ContainerFuncTranformations.Controls.Add(negative);
+            }
+        }
     }
 }

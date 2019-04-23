@@ -48,13 +48,13 @@
             this.btn_ViewDemoHis = new System.Windows.Forms.Button();
             this.pnl_Tranformations = new System.Windows.Forms.Panel();
             this.pnl_ContainerOptionTransformation = new System.Windows.Forms.Panel();
-            this.demoHistogram = new DemoAlgoImageProcessing.UI.ViewHistogramDemo();
             this.btn_Negative = new System.Windows.Forms.Button();
             this.btn_Power = new System.Windows.Forms.Button();
             this.btn_Logarithmic = new System.Windows.Forms.Button();
             this.btn_BitPlaneSlicing = new System.Windows.Forms.Button();
             this.btn_Gray_Level_Slicing = new System.Windows.Forms.Button();
             this.pnl_ContainerFuncTranformations = new System.Windows.Forms.Panel();
+            this.demoHistogram = new DemoAlgoImageProcessing.UI.ViewHistogramDemo();
             ((System.ComponentModel.ISupportInitialize)(this.picb_GLS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_Bit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_Loga)).BeginInit();
@@ -306,15 +306,6 @@
             this.pnl_ContainerOptionTransformation.Size = new System.Drawing.Size(934, 47);
             this.pnl_ContainerOptionTransformation.TabIndex = 0;
             // 
-            // demoHistogram
-            // 
-            this.demoHistogram.Location = new System.Drawing.Point(3, 12);
-            this.demoHistogram.Name = "demoHistogram";
-            this.demoHistogram.Size = new System.Drawing.Size(934, 305);
-            this.demoHistogram.TabIndex = 0;
-            this.demoHistogram.Visible = false;
-            this.demoHistogram.Load += new System.EventHandler(this.demoHistogram_Load);
-            // 
             // btn_Negative
             // 
             this.btn_Negative.Location = new System.Drawing.Point(18, 7);
@@ -323,6 +314,7 @@
             this.btn_Negative.TabIndex = 0;
             this.btn_Negative.Text = "Negative";
             this.btn_Negative.UseVisualStyleBackColor = true;
+            this.btn_Negative.Click += new System.EventHandler(this.btn_Negative_Click);
             // 
             // btn_Power
             // 
@@ -368,6 +360,15 @@
             this.pnl_ContainerFuncTranformations.Name = "pnl_ContainerFuncTranformations";
             this.pnl_ContainerFuncTranformations.Size = new System.Drawing.Size(934, 541);
             this.pnl_ContainerFuncTranformations.TabIndex = 1;
+            // 
+            // demoHistogram
+            // 
+            this.demoHistogram.Location = new System.Drawing.Point(3, 12);
+            this.demoHistogram.Name = "demoHistogram";
+            this.demoHistogram.Size = new System.Drawing.Size(934, 305);
+            this.demoHistogram.TabIndex = 0;
+            this.demoHistogram.Visible = false;
+            this.demoHistogram.Load += new System.EventHandler(this.demoHistogram_Load);
             // 
             // Form1
             // 

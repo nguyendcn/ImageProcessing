@@ -105,6 +105,7 @@
             this.picb_Origition.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picb_Origition.TabIndex = 0;
             this.picb_Origition.TabStop = false;
+            this.picb_Origition.Click += new System.EventHandler(this.picb_Origition_Click);
             // 
             // picb_Destination
             // 
@@ -157,6 +158,7 @@
             this.chr_Origition.Size = new System.Drawing.Size(338, 192);
             this.chr_Origition.TabIndex = 0;
             this.chr_Origition.Text = "chart1";
+            this.chr_Origition.Click += new System.EventHandler(this.chr_Origition_Click);
             // 
             // chr_Destination
             // 
@@ -174,6 +176,7 @@
             this.chr_Destination.Size = new System.Drawing.Size(355, 192);
             this.chr_Destination.TabIndex = 1;
             this.chr_Destination.Text = "chart2";
+            this.chr_Destination.Click += new System.EventHandler(this.chr_Destination_Click);
             // 
             // ofd_OpenFile
             // 
@@ -187,6 +190,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Negative";
             this.Size = new System.Drawing.Size(700, 570);
+            this.Load += new System.EventHandler(this.Negative_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
