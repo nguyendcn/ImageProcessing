@@ -67,6 +67,7 @@
     </Compile>
     <Compile Include="Handing\BitmapExtenstion.cs" />
     <Compile Include="Handing\Histogram.cs" />
+    <Compile Include="Handing\Tranformations\Negative.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\Tranformations\BitPlaneSlicing.cs">
