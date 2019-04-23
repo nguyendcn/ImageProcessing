@@ -16,5 +16,21 @@ namespace DemoAlgoImageProcessing
         {
             InitializeComponent();
         }
+
+        private void btn_Histogram_Click(object sender, EventArgs e)
+        {
+            this.demoHistogram.Visible = false;
+        }
+
+        private void btn_ViewDemoHis_Click(object sender, EventArgs e)
+        {
+            this.demoHistogram.Visible = true;
+            this.demoHistogram.BringToFront();
+        }
+
+        private void demoHistogram_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

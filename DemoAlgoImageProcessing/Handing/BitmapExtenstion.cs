@@ -60,9 +60,16 @@ namespace DemoAlgoImageProcessing.Handing
             hist = Histogram.CalHistogram(image, bitmapData, hist);
 
             //fill to control chart in form.
-            for (int i = 0; i < 256; i++)
+            if (chr.Series.Count == 0)
             {
-                chr.Series[0].Points.AddXY(string.Empty, hist[i]);
+                chr.Series.Add("Grey level");
+            }
+            else
+            {
+                for (int i = 0; i < 256; i++)
+                {
+                    chr.Series[0].Points.AddXY(string.Empty, hist[i]);
+                }
             }
 
             image.UnlockBits(bitmapData);

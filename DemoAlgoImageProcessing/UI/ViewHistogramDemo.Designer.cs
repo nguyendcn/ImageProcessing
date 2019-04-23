@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pic_Original = new System.Windows.Forms.PictureBox();
             this.chr_HisOri = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.picb_Destination = new System.Windows.Forms.PictureBox();
@@ -67,20 +67,21 @@
             // 
             // chr_HisOri
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chr_HisOri.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.chr_HisOri.ChartAreas.Add(chartArea1);
             this.chr_HisOri.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend3.Name = "Legend1";
-            this.chr_HisOri.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.chr_HisOri.Legends.Add(legend1);
             this.chr_HisOri.Location = new System.Drawing.Point(0, 366);
             this.chr_HisOri.Name = "chr_HisOri";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chr_HisOri.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chr_HisOri.Series.Add(series1);
             this.chr_HisOri.Size = new System.Drawing.Size(357, 226);
             this.chr_HisOri.TabIndex = 1;
             this.chr_HisOri.Text = "chart1";
+            this.chr_HisOri.Click += new System.EventHandler(this.chr_HisOri_Click);
             // 
             // picb_Destination
             // 
@@ -94,20 +95,21 @@
             // 
             // chr_HisDis
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chr_HisDis.ChartAreas.Add(chartArea4);
+            chartArea2.Name = "ChartArea1";
+            this.chr_HisDis.ChartAreas.Add(chartArea2);
             this.chr_HisDis.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend4.Name = "Legend1";
-            this.chr_HisDis.Legends.Add(legend4);
+            legend2.Name = "Legend1";
+            this.chr_HisDis.Legends.Add(legend2);
             this.chr_HisDis.Location = new System.Drawing.Point(0, 366);
             this.chr_HisDis.Name = "chr_HisDis";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chr_HisDis.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chr_HisDis.Series.Add(series2);
             this.chr_HisDis.Size = new System.Drawing.Size(348, 226);
             this.chr_HisDis.TabIndex = 3;
             this.chr_HisDis.Text = "chart2";
+            this.chr_HisDis.Click += new System.EventHandler(this.chr_HisDis_Click);
             // 
             // btn_EquaHisto
             // 

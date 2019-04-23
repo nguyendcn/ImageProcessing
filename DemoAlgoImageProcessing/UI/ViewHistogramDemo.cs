@@ -44,5 +44,20 @@ namespace DemoAlgoImageProcessing.UI
                 this.picb_Destination.Image = bm_cl;
             }
         }
+
+        private void chr_HisOri_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.DataVisualization.Charting.SeriesCollection sc = this.chr_HisOri.Series;
+            if (sc == null)
+                return;
+            ViewHistogramDetails frm_vhd = new ViewHistogramDetails(sc, "Haha");
+            frm_vhd.Show();
+        }
+
+        private void chr_HisDis_Click(object sender, EventArgs e)
+        {
+            ViewHistogramDetails frm_vhd = new ViewHistogramDetails(this.chr_HisDis.Series, "Hahadsafs");
+            frm_vhd.Show();
+        }
     }
 }
