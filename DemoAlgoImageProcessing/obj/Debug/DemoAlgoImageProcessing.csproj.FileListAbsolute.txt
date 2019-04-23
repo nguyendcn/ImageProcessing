@@ -66,3 +66,4 @@ C:\Users\Nguyen\Source\Repos\nguyendcn\ImageProcessing\DemoAlgoImageProcessing\b
 C:\Users\Nguyen\Source\Repos\nguyendcn\ImageProcessing\DemoAlgoImageProcessing\bin\Debug\es\DevExpress.XtraLayout.v18.2.resources.dll
 C:\Users\Nguyen\Source\Repos\nguyendcn\ImageProcessing\DemoAlgoImageProcessing\bin\Debug\ja\DevExpress.XtraLayout.v18.2.resources.dll
 C:\Users\Nguyen\Source\Repos\nguyendcn\ImageProcessing\DemoAlgoImageProcessing\bin\Debug\ru\DevExpress.XtraLayout.v18.2.resources.dll
+C:\Users\Nguyen\Source\Repos\nguyendcn\ImageProcessing\DemoAlgoImageProcessing\obj\Debug\DemoAlgoImageProcessing.UI.ViewHistogramDemo.resources

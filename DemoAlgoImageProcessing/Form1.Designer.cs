@@ -46,6 +46,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_Histogram = new System.Windows.Forms.Panel();
             this.btn_ViewDemoHis = new System.Windows.Forms.Button();
+            this.demoHistogram = new UI.ViewHistogramDemo();
             ((System.ComponentModel.ISupportInitialize)(this.picb_GLS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_Bit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_Loga)).BeginInit();
@@ -249,9 +250,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(106, 588);
             this.panel1.TabIndex = 9;
+            //
+            // demoHistogram
+            //
+            this.demoHistogram.Location = new System.Drawing.Point(0, 0);
+            this.demoHistogram.Dock = System.Windows.Forms.DockStyle.Fill;
             // 
             // pnl_Histogram
             // 
+            this.pnl_Histogram.Controls.Add(this.demoHistogram);
             this.pnl_Histogram.Controls.Add(this.btn_ViewDemoHis);
             this.pnl_Histogram.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Histogram.Location = new System.Drawing.Point(106, 0);
@@ -310,5 +317,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnl_Histogram;
         private System.Windows.Forms.Button btn_ViewDemoHis;
+        private UI.ViewHistogramDemo demoHistogram;
     }
 }
