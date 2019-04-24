@@ -1,4 +1,4 @@
-﻿namespace DemoAlgoImageProcessing.UI.Tranformations.Logarithmic
+﻿namespace DemoAlgoImageProcessing.UI.Tranformations.FormInput
 {
     partial class InputForLogarit
     {

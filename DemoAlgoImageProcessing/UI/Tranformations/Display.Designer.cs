@@ -1,6 +1,6 @@
-﻿namespace DemoAlgoImageProcessing.UI.Tranformations.Logarithmic
+﻿namespace DemoAlgoImageProcessing.UI.Tranformations
 {
-    partial class Logarithmics
+    partial class Display
     {
         /// <summary> 
         /// Required designer variable.
@@ -111,6 +111,7 @@
             this.chr_1.Series.Add(series1);
             this.chr_1.Size = new System.Drawing.Size(223, 185);
             this.chr_1.TabIndex = 9;
+            this.chr_1.Tag = "1";
             this.chr_1.Text = "chart4";
             this.chr_1.Click += new System.EventHandler(this.chr_1_Click);
             // 
@@ -123,6 +124,7 @@
             this.picb_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picb_2.TabIndex = 2;
             this.picb_2.TabStop = false;
+            this.picb_2.Tag = "2";
             // 
             // picb_1
             // 
@@ -133,6 +135,7 @@
             this.picb_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picb_1.TabIndex = 1;
             this.picb_1.TabStop = false;
+            this.picb_1.Tag = "1";
             // 
             // picb_Original
             // 
@@ -143,6 +146,7 @@
             this.picb_Original.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picb_Original.TabIndex = 0;
             this.picb_Original.TabStop = false;
+            this.picb_Original.Tag = "0";
             // 
             // chr_Original
             // 
@@ -159,6 +163,7 @@
             this.chr_Original.Series.Add(series2);
             this.chr_Original.Size = new System.Drawing.Size(223, 185);
             this.chr_Original.TabIndex = 3;
+            this.chr_Original.Tag = "0";
             this.chr_Original.Text = "chart1";
             this.chr_Original.Click += new System.EventHandler(this.chr_Original_Click);
             // 
@@ -178,6 +183,7 @@
             this.chr_2.Series.Add(series3);
             this.chr_2.Size = new System.Drawing.Size(223, 185);
             this.chr_2.TabIndex = 4;
+            this.chr_2.Tag = "2";
             this.chr_2.Text = "chart2";
             this.chr_2.Click += new System.EventHandler(this.chr_2_Click);
             // 
@@ -197,6 +203,7 @@
             this.chr_3.Series.Add(series4);
             this.chr_3.Size = new System.Drawing.Size(226, 185);
             this.chr_3.TabIndex = 5;
+            this.chr_3.Tag = "3";
             this.chr_3.Text = "chart3";
             this.chr_3.Click += new System.EventHandler(this.chr_3_Click);
             // 
@@ -208,6 +215,7 @@
             this.lbl_1.Name = "lbl_1";
             this.lbl_1.Size = new System.Drawing.Size(223, 33);
             this.lbl_1.TabIndex = 6;
+            this.lbl_1.Tag = "1";
             this.lbl_1.Text = "label1";
             this.lbl_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -219,6 +227,7 @@
             this.lbl_Original.Name = "lbl_Original";
             this.lbl_Original.Size = new System.Drawing.Size(223, 33);
             this.lbl_Original.TabIndex = 7;
+            this.lbl_Original.Tag = "0";
             this.lbl_Original.Text = "label2";
             this.lbl_Original.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -230,6 +239,7 @@
             this.lbl_2.Name = "lbl_2";
             this.lbl_2.Size = new System.Drawing.Size(223, 33);
             this.lbl_2.TabIndex = 8;
+            this.lbl_2.Tag = "2";
             this.lbl_2.Text = "label3";
             this.lbl_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -241,6 +251,7 @@
             this.lbl_3.Name = "lbl_3";
             this.lbl_3.Size = new System.Drawing.Size(226, 33);
             this.lbl_3.TabIndex = 10;
+            this.lbl_3.Tag = "3";
             this.lbl_3.Text = "label4";
             this.lbl_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -253,6 +264,7 @@
             this.picb_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picb_3.TabIndex = 11;
             this.picb_3.TabStop = false;
+            this.picb_3.Tag = "3";
             // 
             // Logarithmics
             // 

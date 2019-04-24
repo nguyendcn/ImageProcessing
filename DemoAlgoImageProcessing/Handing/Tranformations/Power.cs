@@ -8,15 +8,10 @@ using System.Threading.Tasks;
 
 namespace DemoAlgoImageProcessing.Handing.Tranformations
 {
-    public static class Logarithmic
+    public static class Power
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="image"></param>
-        /// <param name="c"></param>
         unsafe
-        public static void Getresult(Bitmap image, double c)
+        public static void PowerLaw(Bitmap image, double lamda, int c)
         {
             BitmapData bitmapData = image.LockBits(new Rectangle(0, 0, image.Width, image.Height),
                                                         ImageLockMode.ReadWrite,
@@ -28,14 +23,9 @@ namespace DemoAlgoImageProcessing.Handing.Tranformations
             {
                 for (int j = 0; j < image.Width; j++)
                 {
-                    // s = c * log(1 + r)   r: [0, 1]
-                    //p[0] = p[0] > 255 ? (byte)255 : p[0];
+                    // s = c * r^lamda   r: [0, 1]
                     r = p[0] / 255.0;
-                    s = Math.Log10(1 + r) * c * 255;
-                    //int temp = (int)s;
-
-                    s = s > 255 ? 255 : s;
-
+                    s = c * Math.Pow(r, lamda) * 255.0;
                     p[0] = (byte)s;
                     p[1] = (byte)s;
                     p[2] = (byte)s;
@@ -46,24 +36,19 @@ namespace DemoAlgoImageProcessing.Handing.Tranformations
             image.UnlockBits(bitmapData);
         }
 
-        /// <summary>
-        /// Enter the input for Form Logarithmic.
-        /// </summary>
-        /// <returns>List input.</returns>
         public static List<string> EnterInput()
         {
-            UI.Tranformations.FormInput.InputForLogarit inputForLogarit = new UI.Tranformations.FormInput.InputForLogarit();
-            inputForLogarit.ShowDialog();
-
-            if (inputForLogarit.isCancel)
+            UI.Tranformations.FormInput.InputForPower inputForPower = new UI.Tranformations.FormInput.InputForPower();
+            inputForPower.ShowDialog();
+            
+            if(inputForPower.isCancel)
             {
                 return new List<string>();
             }
             else
             {
-                return new List<string> {inputForLogarit.c_1, inputForLogarit.c_2, inputForLogarit.c_3 };
+                return new List<string> { inputForPower.image_1, inputForPower.image_2, inputForPower.image_3};
             }
-
         }
     }
 }

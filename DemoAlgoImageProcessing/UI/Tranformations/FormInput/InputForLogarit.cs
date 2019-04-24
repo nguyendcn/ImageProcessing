@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DemoAlgoImageProcessing.UI.Tranformations.Logarithmic
+namespace DemoAlgoImageProcessing.UI.Tranformations.FormInput
 {
     public partial class InputForLogarit : Form
     {
-        public int c_1;
-        public int c_2;
-        public int c_3;
+        public string c_1;
+        public string c_2;
+        public string c_3;
         public bool isCancel = true;
 
         public InputForLogarit()
@@ -24,9 +24,9 @@ namespace DemoAlgoImageProcessing.UI.Tranformations.Logarithmic
 
         private void btn_OK_Click(object sender, EventArgs e)
         {
-            this.c_1 = Convert.ToInt32(txt_C1.Text);
-            this.c_2 = Convert.ToInt32(txt_C2.Text);
-            this.c_3 = Convert.ToInt32(txt_C3.Text);
+            this.c_1 = txt_C1.Text;
+            this.c_2 = txt_C2.Text;
+            this.c_3 = txt_C3.Text;
             this.isCancel = false;
 
             this.Dispose();

@@ -35,16 +35,22 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.chr_Origition = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chr_Destination = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.panel2 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.picb_Origition = new System.Windows.Forms.PictureBox();
             this.picb_Destination = new System.Windows.Forms.PictureBox();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.chr_Origition = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chr_Destination = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ofd_OpenFile = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chr_Origition)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chr_Destination)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -52,12 +58,6 @@
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picb_Origition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_Destination)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chr_Origition)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chr_Destination)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,61 +69,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(700, 192);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.splitContainer1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(700, 378);
-            this.panel2.TabIndex = 1;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.picb_Origition);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.picb_Destination);
-            this.splitContainer1.Size = new System.Drawing.Size(700, 378);
-            this.splitContainer1.SplitterDistance = 340;
-            this.splitContainer1.TabIndex = 0;
-            // 
-            // picb_Origition
-            // 
-            this.picb_Origition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picb_Origition.Location = new System.Drawing.Point(0, 0);
-            this.picb_Origition.Name = "picb_Origition";
-            this.picb_Origition.Size = new System.Drawing.Size(340, 378);
-            this.picb_Origition.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picb_Origition.TabIndex = 0;
-            this.picb_Origition.TabStop = false;
-            this.picb_Origition.Click += new System.EventHandler(this.picb_Origition_Click);
-            // 
-            // picb_Destination
-            // 
-            this.picb_Destination.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picb_Destination.Location = new System.Drawing.Point(0, 0);
-            this.picb_Destination.Name = "picb_Destination";
-            this.picb_Destination.Size = new System.Drawing.Size(356, 378);
-            this.picb_Destination.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picb_Destination.TabIndex = 1;
-            this.picb_Destination.TabStop = false;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 192);
-            this.splitter1.TabIndex = 0;
-            this.splitter1.TabStop = false;
             // 
             // splitContainer2
             // 
@@ -178,6 +123,61 @@
             this.chr_Destination.Text = "chart2";
             this.chr_Destination.Click += new System.EventHandler(this.chr_Destination_Click);
             // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 192);
+            this.splitter1.TabIndex = 0;
+            this.splitter1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.splitContainer1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(700, 378);
+            this.panel2.TabIndex = 1;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.picb_Origition);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.picb_Destination);
+            this.splitContainer1.Size = new System.Drawing.Size(700, 378);
+            this.splitContainer1.SplitterDistance = 340;
+            this.splitContainer1.TabIndex = 0;
+            // 
+            // picb_Origition
+            // 
+            this.picb_Origition.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picb_Origition.Location = new System.Drawing.Point(0, 0);
+            this.picb_Origition.Name = "picb_Origition";
+            this.picb_Origition.Size = new System.Drawing.Size(340, 378);
+            this.picb_Origition.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picb_Origition.TabIndex = 0;
+            this.picb_Origition.TabStop = false;
+            this.picb_Origition.Click += new System.EventHandler(this.picb_Origition_Click);
+            // 
+            // picb_Destination
+            // 
+            this.picb_Destination.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picb_Destination.Location = new System.Drawing.Point(0, 0);
+            this.picb_Destination.Name = "picb_Destination";
+            this.picb_Destination.Size = new System.Drawing.Size(356, 378);
+            this.picb_Destination.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picb_Destination.TabIndex = 1;
+            this.picb_Destination.TabStop = false;
+            // 
             // ofd_OpenFile
             // 
             this.ofd_OpenFile.FileName = "openFileDialog1";
@@ -190,8 +190,15 @@
             this.Controls.Add(this.panel1);
             this.Name = "Negative";
             this.Size = new System.Drawing.Size(700, 570);
+            this.Tag = "Negative";
             this.Load += new System.EventHandler(this.Negative_Load);
             this.panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chr_Origition)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chr_Destination)).EndInit();
             this.panel2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -199,12 +206,6 @@
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picb_Origition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_Destination)).EndInit();
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chr_Origition)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chr_Destination)).EndInit();
             this.ResumeLayout(false);
 
         }

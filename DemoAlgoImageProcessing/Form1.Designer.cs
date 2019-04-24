@@ -46,15 +46,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_Histogram = new System.Windows.Forms.Panel();
             this.btn_ViewDemoHis = new System.Windows.Forms.Button();
-            this.pnl_Tranformations = new System.Windows.Forms.Panel();
-            this.pnl_ContainerOptionTransformation = new System.Windows.Forms.Panel();
-            this.btn_Negative = new System.Windows.Forms.Button();
-            this.btn_Power = new System.Windows.Forms.Button();
-            this.btn_Logarithmic = new System.Windows.Forms.Button();
-            this.btn_BitPlaneSlicing = new System.Windows.Forms.Button();
-            this.btn_Gray_Level_Slicing = new System.Windows.Forms.Button();
-            this.pnl_ContainerFuncTranformations = new System.Windows.Forms.Panel();
             this.demoHistogram = new DemoAlgoImageProcessing.UI.ViewHistogramDemo();
+            this.pnl_Tranformations = new System.Windows.Forms.Panel();
+            this.pnl_ContainerFuncTranformations = new System.Windows.Forms.Panel();
+            this.pnl_ContainerOptionTransformation = new System.Windows.Forms.Panel();
+            this.btn_Gray_Level_Slicing = new System.Windows.Forms.Button();
+            this.btn_BitPlaneSlicing = new System.Windows.Forms.Button();
+            this.btn_Logarithmic = new System.Windows.Forms.Button();
+            this.btn_Power = new System.Windows.Forms.Button();
+            this.btn_Negative = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picb_GLS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_Bit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_Loga)).BeginInit();
@@ -283,6 +283,15 @@
             this.btn_ViewDemoHis.UseVisualStyleBackColor = true;
             this.btn_ViewDemoHis.Click += new System.EventHandler(this.btn_ViewDemoHis_Click);
             // 
+            // demoHistogram
+            // 
+            this.demoHistogram.Location = new System.Drawing.Point(3, 12);
+            this.demoHistogram.Name = "demoHistogram";
+            this.demoHistogram.Size = new System.Drawing.Size(934, 305);
+            this.demoHistogram.TabIndex = 0;
+            this.demoHistogram.Visible = false;
+            this.demoHistogram.Load += new System.EventHandler(this.demoHistogram_Load);
+            // 
             // pnl_Tranformations
             // 
             this.pnl_Tranformations.Controls.Add(this.pnl_ContainerFuncTranformations);
@@ -292,6 +301,15 @@
             this.pnl_Tranformations.Name = "pnl_Tranformations";
             this.pnl_Tranformations.Size = new System.Drawing.Size(934, 588);
             this.pnl_Tranformations.TabIndex = 3;
+            // 
+            // pnl_ContainerFuncTranformations
+            // 
+            this.pnl_ContainerFuncTranformations.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnl_ContainerFuncTranformations.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_ContainerFuncTranformations.Location = new System.Drawing.Point(0, 47);
+            this.pnl_ContainerFuncTranformations.Name = "pnl_ContainerFuncTranformations";
+            this.pnl_ContainerFuncTranformations.Size = new System.Drawing.Size(934, 541);
+            this.pnl_ContainerFuncTranformations.TabIndex = 1;
             // 
             // pnl_ContainerOptionTransformation
             // 
@@ -306,24 +324,23 @@
             this.pnl_ContainerOptionTransformation.Size = new System.Drawing.Size(934, 47);
             this.pnl_ContainerOptionTransformation.TabIndex = 0;
             // 
-            // btn_Negative
+            // btn_Gray_Level_Slicing
             // 
-            this.btn_Negative.Location = new System.Drawing.Point(18, 7);
-            this.btn_Negative.Name = "btn_Negative";
-            this.btn_Negative.Size = new System.Drawing.Size(78, 32);
-            this.btn_Negative.TabIndex = 0;
-            this.btn_Negative.Text = "Negative";
-            this.btn_Negative.UseVisualStyleBackColor = true;
-            this.btn_Negative.Click += new System.EventHandler(this.btn_Negative_Click);
+            this.btn_Gray_Level_Slicing.Location = new System.Drawing.Point(421, 7);
+            this.btn_Gray_Level_Slicing.Name = "btn_Gray_Level_Slicing";
+            this.btn_Gray_Level_Slicing.Size = new System.Drawing.Size(102, 32);
+            this.btn_Gray_Level_Slicing.TabIndex = 4;
+            this.btn_Gray_Level_Slicing.Text = "Gray Level Slicing";
+            this.btn_Gray_Level_Slicing.UseVisualStyleBackColor = true;
             // 
-            // btn_Power
+            // btn_BitPlaneSlicing
             // 
-            this.btn_Power.Location = new System.Drawing.Point(212, 7);
-            this.btn_Power.Name = "btn_Power";
-            this.btn_Power.Size = new System.Drawing.Size(78, 32);
-            this.btn_Power.TabIndex = 1;
-            this.btn_Power.Text = "Power";
-            this.btn_Power.UseVisualStyleBackColor = true;
+            this.btn_BitPlaneSlicing.Location = new System.Drawing.Point(310, 7);
+            this.btn_BitPlaneSlicing.Name = "btn_BitPlaneSlicing";
+            this.btn_BitPlaneSlicing.Size = new System.Drawing.Size(93, 32);
+            this.btn_BitPlaneSlicing.TabIndex = 3;
+            this.btn_BitPlaneSlicing.Text = "Bit Plane Slicing";
+            this.btn_BitPlaneSlicing.UseVisualStyleBackColor = true;
             // 
             // btn_Logarithmic
             // 
@@ -335,41 +352,25 @@
             this.btn_Logarithmic.UseVisualStyleBackColor = true;
             this.btn_Logarithmic.Click += new System.EventHandler(this.Btn_Logarithmic_Click);
             // 
-            // btn_BitPlaneSlicing
+            // btn_Power
             // 
-            this.btn_BitPlaneSlicing.Location = new System.Drawing.Point(310, 7);
-            this.btn_BitPlaneSlicing.Name = "btn_BitPlaneSlicing";
-            this.btn_BitPlaneSlicing.Size = new System.Drawing.Size(93, 32);
-            this.btn_BitPlaneSlicing.TabIndex = 3;
-            this.btn_BitPlaneSlicing.Text = "Bit Plane Slicing";
-            this.btn_BitPlaneSlicing.UseVisualStyleBackColor = true;
+            this.btn_Power.Location = new System.Drawing.Point(212, 7);
+            this.btn_Power.Name = "btn_Power";
+            this.btn_Power.Size = new System.Drawing.Size(78, 32);
+            this.btn_Power.TabIndex = 1;
+            this.btn_Power.Text = "Power";
+            this.btn_Power.UseVisualStyleBackColor = true;
+            this.btn_Power.Click += new System.EventHandler(this.btn_Power_Click);
             // 
-            // btn_Gray_Level_Slicing
+            // btn_Negative
             // 
-            this.btn_Gray_Level_Slicing.Location = new System.Drawing.Point(421, 7);
-            this.btn_Gray_Level_Slicing.Name = "btn_Gray_Level_Slicing";
-            this.btn_Gray_Level_Slicing.Size = new System.Drawing.Size(102, 32);
-            this.btn_Gray_Level_Slicing.TabIndex = 4;
-            this.btn_Gray_Level_Slicing.Text = "Gray Level Slicing";
-            this.btn_Gray_Level_Slicing.UseVisualStyleBackColor = true;
-            // 
-            // pnl_ContainerFuncTranformations
-            // 
-            this.pnl_ContainerFuncTranformations.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnl_ContainerFuncTranformations.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_ContainerFuncTranformations.Location = new System.Drawing.Point(0, 47);
-            this.pnl_ContainerFuncTranformations.Name = "pnl_ContainerFuncTranformations";
-            this.pnl_ContainerFuncTranformations.Size = new System.Drawing.Size(934, 541);
-            this.pnl_ContainerFuncTranformations.TabIndex = 1;
-            // 
-            // demoHistogram
-            // 
-            this.demoHistogram.Location = new System.Drawing.Point(3, 12);
-            this.demoHistogram.Name = "demoHistogram";
-            this.demoHistogram.Size = new System.Drawing.Size(934, 305);
-            this.demoHistogram.TabIndex = 0;
-            this.demoHistogram.Visible = false;
-            this.demoHistogram.Load += new System.EventHandler(this.demoHistogram_Load);
+            this.btn_Negative.Location = new System.Drawing.Point(18, 7);
+            this.btn_Negative.Name = "btn_Negative";
+            this.btn_Negative.Size = new System.Drawing.Size(78, 32);
+            this.btn_Negative.TabIndex = 0;
+            this.btn_Negative.Text = "Negative";
+            this.btn_Negative.UseVisualStyleBackColor = true;
+            this.btn_Negative.Click += new System.EventHandler(this.btn_Negative_Click);
             // 
             // Form1
             // 

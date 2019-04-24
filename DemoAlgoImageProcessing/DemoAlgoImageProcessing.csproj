@@ -69,43 +69,32 @@
     <Compile Include="Handing\Histogram.cs" />
     <Compile Include="Handing\Tranformations\Logarithmic.cs" />
     <Compile Include="Handing\Tranformations\Negative.cs" />
+    <Compile Include="Handing\Tranformations\Power.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Tranformations\BitPlaneSlicing.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Tranformations\BitPlaneSlicing.Designer.cs">
-      <DependentUpon>BitPlaneSlicing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Tranformations\GrayLevelSlicing.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Tranformations\GrayLevelSlicing.Designer.cs">
-      <DependentUpon>GrayLevelSlicing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Tranformations\Logarithmic\InputForLogarit.cs">
+    <Compile Include="UI\Tranformations\FormInput\InputForLogarit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Tranformations\Logarithmic\InputForLogarit.Designer.cs">
+    <Compile Include="UI\Tranformations\FormInput\InputForLogarit.Designer.cs">
       <DependentUpon>InputForLogarit.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Tranformations\Logarithmic\Logarithmics.cs">
+    <Compile Include="UI\Tranformations\Display.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Tranformations\Logarithmic\Logarithmics.Designer.cs">
-      <DependentUpon>Logarithmics.cs</DependentUpon>
+    <Compile Include="UI\Tranformations\Display.Designer.cs">
+      <DependentUpon>Display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Tranformations\FormInput\InputForPower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Tranformations\FormInput\InputForPower.Designer.cs">
+      <DependentUpon>InputForPower.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Tranformations\Negative.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\Tranformations\Negative.Designer.cs">
       <DependentUpon>Negative.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Tranformations\Power.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Tranformations\Power.Designer.cs">
-      <DependentUpon>Power.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ViewHistogramDemo.cs">
       <SubType>UserControl</SubType>
@@ -132,11 +121,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\Tranformations\Logarithmic\InputForLogarit.resx">
+    <EmbeddedResource Include="UI\Tranformations\FormInput\InputForLogarit.resx">
       <DependentUpon>InputForLogarit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Tranformations\Logarithmic\Logarithmics.resx">
-      <DependentUpon>Logarithmics.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Tranformations\Display.resx">
+      <DependentUpon>Display.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Tranformations\FormInput\InputForPower.resx">
+      <DependentUpon>InputForPower.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Tranformations\Negative.resx">
       <DependentUpon>Negative.cs</DependentUpon>
