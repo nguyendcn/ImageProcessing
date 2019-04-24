@@ -14,16 +14,56 @@ namespace DemoAlgoImageProcessing
             InitializeComponent();
         }
 
+        private void HideFunc()
+        {
+            this.pnl_Histogram.Visible = false;
+            this.pnl_Index.Visible = false;
+            this.pnl_Tranformations.Visible = false;
+
+            this.picb_Index.BackColor = this.picb_Histo.BackColor = this.picb_Tranf.BackColor = Color.Transparent;
+            this.btn_Index.BackColor = this.btn_Histogram.BackColor = this.btn_Tranformations.BackColor = Color.Transparent;
+        }
+
+
+        private void btn_Index_Click(object sender, EventArgs e)
+        {
+            HideFunc();
+            this.pnl_Index.Visible = true;
+            this.pnl_Index.BringToFront();
+
+            this.picb_Index.BackColor = Color.Red;
+            //this.btn_Index.BackColor = Color.White;
+        }
+
         private void btn_Histogram_Click(object sender, EventArgs e)
         {
+            HideFunc();
             this.demoHistogram.Visible = false;
+            this.pnl_Histogram.Visible = true;
+            this.pnl_Histogram.BringToFront();
+
+            this.picb_Histo.BackColor = Color.Red;
+           // this.btn_Histogram.BackColor = Color.White;
+        }
+
+        private void btn_Tranformations_Click(object sender, EventArgs e)
+        {
+            HideFunc();
+            this.pnl_Tranformations.Visible = true;
+            this.pnl_Tranformations.BringToFront();
+
+            this.picb_Tranf.BackColor = Color.Red;
+            //this.btn_Tranformations.BackColor = Color.White;
         }
 
         private void btn_ViewDemoHis_Click(object sender, EventArgs e)
         {
             this.demoHistogram.Visible = true;
+            this.demoHistogram.Dock = DockStyle.Fill;
             this.demoHistogram.BringToFront();
         }
+
+        
 
         private void demoHistogram_Load(object sender, EventArgs e)
         {
@@ -280,5 +320,7 @@ namespace DemoAlgoImageProcessing
                 }
             }
         }
+
+        
     }
 }

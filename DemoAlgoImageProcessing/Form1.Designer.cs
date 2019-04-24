@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ofd_OpenFile = new System.Windows.Forms.OpenFileDialog();
             this.btn_AddImage = new System.Windows.Forms.Button();
-            this.picb_GLS = new System.Windows.Forms.PictureBox();
-            this.btn_GLS = new System.Windows.Forms.Button();
-            this.picb_Bit = new System.Windows.Forms.PictureBox();
+            this.picb_Seg = new System.Windows.Forms.PictureBox();
+            this.btn_Seg = new System.Windows.Forms.Button();
+            this.picb_Tranf = new System.Windows.Forms.PictureBox();
             this.btn_Tranformations = new System.Windows.Forms.Button();
-            this.picb_Loga = new System.Windows.Forms.PictureBox();
+            this.picb_Histo = new System.Windows.Forms.PictureBox();
             this.btn_Histogram = new System.Windows.Forms.Button();
-            this.picb_PLaw = new System.Windows.Forms.PictureBox();
-            this.btn_PLaw = new System.Windows.Forms.Button();
-            this.picb_btnIndex = new System.Windows.Forms.PictureBox();
+            this.picb_Spatial = new System.Windows.Forms.PictureBox();
+            this.btn_Spatial = new System.Windows.Forms.Button();
+            this.picb_Index = new System.Windows.Forms.PictureBox();
             this.btn_Index = new System.Windows.Forms.Button();
             this.picb_ShowImage = new System.Windows.Forms.PictureBox();
             this.pnl_Index = new System.Windows.Forms.Panel();
@@ -55,17 +55,20 @@
             this.btn_Power = new System.Windows.Forms.Button();
             this.btn_Negative = new System.Windows.Forms.Button();
             this.demoHistogram = new DemoAlgoImageProcessing.UI.ViewHistogramDemo();
-            ((System.ComponentModel.ISupportInitialize)(this.picb_GLS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picb_Bit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picb_Loga)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picb_PLaw)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picb_btnIndex)).BeginInit();
+            this.picb_Morphology = new System.Windows.Forms.PictureBox();
+            this.btn_Morphology = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Seg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Tranf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Histo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Spatial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Index)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_ShowImage)).BeginInit();
             this.pnl_Index.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnl_Histogram.SuspendLayout();
             this.pnl_Tranformations.SuspendLayout();
             this.pnl_ContainerOptionTransformation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Morphology)).BeginInit();
             this.SuspendLayout();
             // 
             // ofd_OpenFile
@@ -84,41 +87,41 @@
             this.btn_AddImage.Text = "Insert Image";
             this.btn_AddImage.UseVisualStyleBackColor = true;
             // 
-            // picb_GLS
+            // picb_Seg
             // 
-            this.picb_GLS.BackColor = System.Drawing.Color.Transparent;
-            this.picb_GLS.Location = new System.Drawing.Point(2, 287);
-            this.picb_GLS.Name = "picb_GLS";
-            this.picb_GLS.Size = new System.Drawing.Size(10, 56);
-            this.picb_GLS.TabIndex = 14;
-            this.picb_GLS.TabStop = false;
+            this.picb_Seg.BackColor = System.Drawing.Color.Transparent;
+            this.picb_Seg.Location = new System.Drawing.Point(2, 287);
+            this.picb_Seg.Name = "picb_Seg";
+            this.picb_Seg.Size = new System.Drawing.Size(10, 56);
+            this.picb_Seg.TabIndex = 14;
+            this.picb_Seg.TabStop = false;
             // 
-            // btn_GLS
+            // btn_Seg
             // 
-            this.btn_GLS.BackColor = System.Drawing.Color.Transparent;
-            this.btn_GLS.CausesValidation = false;
-            this.btn_GLS.FlatAppearance.BorderSize = 0;
-            this.btn_GLS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_GLS.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GLS.ForeColor = System.Drawing.Color.White;
-            this.btn_GLS.Image = ((System.Drawing.Image)(resources.GetObject("btn_GLS.Image")));
-            this.btn_GLS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_GLS.Location = new System.Drawing.Point(12, 287);
-            this.btn_GLS.Name = "btn_GLS";
-            this.btn_GLS.Size = new System.Drawing.Size(94, 56);
-            this.btn_GLS.TabIndex = 13;
-            this.btn_GLS.Text = "GLS";
-            this.btn_GLS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_GLS.UseVisualStyleBackColor = false;
+            this.btn_Seg.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Seg.CausesValidation = false;
+            this.btn_Seg.FlatAppearance.BorderSize = 0;
+            this.btn_Seg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Seg.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Seg.ForeColor = System.Drawing.Color.White;
+            this.btn_Seg.Image = ((System.Drawing.Image)(resources.GetObject("btn_Seg.Image")));
+            this.btn_Seg.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Seg.Location = new System.Drawing.Point(12, 287);
+            this.btn_Seg.Name = "btn_Seg";
+            this.btn_Seg.Size = new System.Drawing.Size(94, 56);
+            this.btn_Seg.TabIndex = 13;
+            this.btn_Seg.Text = "Segmentation";
+            this.btn_Seg.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Seg.UseVisualStyleBackColor = false;
             // 
-            // picb_Bit
+            // picb_Tranf
             // 
-            this.picb_Bit.BackColor = System.Drawing.Color.Transparent;
-            this.picb_Bit.Location = new System.Drawing.Point(2, 163);
-            this.picb_Bit.Name = "picb_Bit";
-            this.picb_Bit.Size = new System.Drawing.Size(10, 56);
-            this.picb_Bit.TabIndex = 12;
-            this.picb_Bit.TabStop = false;
+            this.picb_Tranf.BackColor = System.Drawing.Color.Transparent;
+            this.picb_Tranf.Location = new System.Drawing.Point(2, 163);
+            this.picb_Tranf.Name = "picb_Tranf";
+            this.picb_Tranf.Size = new System.Drawing.Size(10, 56);
+            this.picb_Tranf.TabIndex = 12;
+            this.picb_Tranf.TabStop = false;
             // 
             // btn_Tranformations
             // 
@@ -137,15 +140,16 @@
             this.btn_Tranformations.Text = "Tranformation";
             this.btn_Tranformations.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Tranformations.UseVisualStyleBackColor = false;
+            this.btn_Tranformations.Click += new System.EventHandler(this.btn_Tranformations_Click);
             // 
-            // picb_Loga
+            // picb_Histo
             // 
-            this.picb_Loga.BackColor = System.Drawing.Color.Transparent;
-            this.picb_Loga.Location = new System.Drawing.Point(2, 101);
-            this.picb_Loga.Name = "picb_Loga";
-            this.picb_Loga.Size = new System.Drawing.Size(10, 56);
-            this.picb_Loga.TabIndex = 10;
-            this.picb_Loga.TabStop = false;
+            this.picb_Histo.BackColor = System.Drawing.Color.Transparent;
+            this.picb_Histo.Location = new System.Drawing.Point(2, 101);
+            this.picb_Histo.Name = "picb_Histo";
+            this.picb_Histo.Size = new System.Drawing.Size(10, 56);
+            this.picb_Histo.TabIndex = 10;
+            this.picb_Histo.TabStop = false;
             // 
             // btn_Histogram
             // 
@@ -166,41 +170,41 @@
             this.btn_Histogram.UseVisualStyleBackColor = false;
             this.btn_Histogram.Click += new System.EventHandler(this.btn_Histogram_Click);
             // 
-            // picb_PLaw
+            // picb_Spatial
             // 
-            this.picb_PLaw.BackColor = System.Drawing.Color.Transparent;
-            this.picb_PLaw.Location = new System.Drawing.Point(2, 225);
-            this.picb_PLaw.Name = "picb_PLaw";
-            this.picb_PLaw.Size = new System.Drawing.Size(10, 56);
-            this.picb_PLaw.TabIndex = 8;
-            this.picb_PLaw.TabStop = false;
+            this.picb_Spatial.BackColor = System.Drawing.Color.Transparent;
+            this.picb_Spatial.Location = new System.Drawing.Point(2, 225);
+            this.picb_Spatial.Name = "picb_Spatial";
+            this.picb_Spatial.Size = new System.Drawing.Size(10, 56);
+            this.picb_Spatial.TabIndex = 8;
+            this.picb_Spatial.TabStop = false;
             // 
-            // btn_PLaw
+            // btn_Spatial
             // 
-            this.btn_PLaw.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PLaw.CausesValidation = false;
-            this.btn_PLaw.FlatAppearance.BorderSize = 0;
-            this.btn_PLaw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PLaw.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_PLaw.ForeColor = System.Drawing.Color.White;
-            this.btn_PLaw.Image = ((System.Drawing.Image)(resources.GetObject("btn_PLaw.Image")));
-            this.btn_PLaw.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_PLaw.Location = new System.Drawing.Point(12, 225);
-            this.btn_PLaw.Name = "btn_PLaw";
-            this.btn_PLaw.Size = new System.Drawing.Size(94, 56);
-            this.btn_PLaw.TabIndex = 7;
-            this.btn_PLaw.Text = "PLaw";
-            this.btn_PLaw.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_PLaw.UseVisualStyleBackColor = false;
+            this.btn_Spatial.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Spatial.CausesValidation = false;
+            this.btn_Spatial.FlatAppearance.BorderSize = 0;
+            this.btn_Spatial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Spatial.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Spatial.ForeColor = System.Drawing.Color.White;
+            this.btn_Spatial.Image = ((System.Drawing.Image)(resources.GetObject("btn_Spatial.Image")));
+            this.btn_Spatial.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Spatial.Location = new System.Drawing.Point(12, 225);
+            this.btn_Spatial.Name = "btn_Spatial";
+            this.btn_Spatial.Size = new System.Drawing.Size(94, 56);
+            this.btn_Spatial.TabIndex = 7;
+            this.btn_Spatial.Text = "Spatial Filter";
+            this.btn_Spatial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Spatial.UseVisualStyleBackColor = false;
             // 
-            // picb_btnIndex
+            // picb_Index
             // 
-            this.picb_btnIndex.BackColor = System.Drawing.Color.Red;
-            this.picb_btnIndex.Location = new System.Drawing.Point(2, 39);
-            this.picb_btnIndex.Name = "picb_btnIndex";
-            this.picb_btnIndex.Size = new System.Drawing.Size(10, 56);
-            this.picb_btnIndex.TabIndex = 6;
-            this.picb_btnIndex.TabStop = false;
+            this.picb_Index.BackColor = System.Drawing.Color.Red;
+            this.picb_Index.Location = new System.Drawing.Point(2, 39);
+            this.picb_Index.Name = "picb_Index";
+            this.picb_Index.Size = new System.Drawing.Size(10, 56);
+            this.picb_Index.TabIndex = 6;
+            this.picb_Index.TabStop = false;
             // 
             // btn_Index
             // 
@@ -220,6 +224,7 @@
             this.btn_Index.Text = "Index";
             this.btn_Index.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Index.UseVisualStyleBackColor = false;
+            this.btn_Index.Click += new System.EventHandler(this.btn_Index_Click);
             // 
             // picb_ShowImage
             // 
@@ -245,15 +250,17 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.picb_GLS);
-            this.panel1.Controls.Add(this.btn_GLS);
-            this.panel1.Controls.Add(this.picb_Bit);
+            this.panel1.Controls.Add(this.picb_Morphology);
+            this.panel1.Controls.Add(this.btn_Morphology);
+            this.panel1.Controls.Add(this.picb_Seg);
+            this.panel1.Controls.Add(this.btn_Seg);
+            this.panel1.Controls.Add(this.picb_Tranf);
             this.panel1.Controls.Add(this.btn_Tranformations);
-            this.panel1.Controls.Add(this.picb_Loga);
+            this.panel1.Controls.Add(this.picb_Histo);
             this.panel1.Controls.Add(this.btn_Histogram);
-            this.panel1.Controls.Add(this.picb_PLaw);
-            this.panel1.Controls.Add(this.btn_PLaw);
-            this.panel1.Controls.Add(this.picb_btnIndex);
+            this.panel1.Controls.Add(this.picb_Spatial);
+            this.panel1.Controls.Add(this.btn_Spatial);
+            this.panel1.Controls.Add(this.picb_Index);
             this.panel1.Controls.Add(this.btn_Index);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.White;
@@ -374,6 +381,33 @@
             this.demoHistogram.Visible = false;
             this.demoHistogram.Load += new System.EventHandler(this.demoHistogram_Load);
             // 
+            // picb_Morphology
+            // 
+            this.picb_Morphology.BackColor = System.Drawing.Color.Transparent;
+            this.picb_Morphology.Location = new System.Drawing.Point(2, 349);
+            this.picb_Morphology.Name = "picb_Morphology";
+            this.picb_Morphology.Size = new System.Drawing.Size(10, 56);
+            this.picb_Morphology.TabIndex = 16;
+            this.picb_Morphology.TabStop = false;
+            // 
+            // btn_Morphology
+            // 
+            this.btn_Morphology.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Morphology.CausesValidation = false;
+            this.btn_Morphology.FlatAppearance.BorderSize = 0;
+            this.btn_Morphology.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Morphology.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Morphology.ForeColor = System.Drawing.Color.White;
+            this.btn_Morphology.Image = ((System.Drawing.Image)(resources.GetObject("btn_Morphology.Image")));
+            this.btn_Morphology.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Morphology.Location = new System.Drawing.Point(12, 349);
+            this.btn_Morphology.Name = "btn_Morphology";
+            this.btn_Morphology.Size = new System.Drawing.Size(94, 56);
+            this.btn_Morphology.TabIndex = 15;
+            this.btn_Morphology.Text = "Morphology";
+            this.btn_Morphology.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Morphology.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,17 +419,18 @@
             this.Controls.Add(this.pnl_Histogram);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.picb_GLS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picb_Bit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picb_Loga)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picb_PLaw)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picb_btnIndex)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Seg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Tranf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Histo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Spatial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Index)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_ShowImage)).EndInit();
             this.pnl_Index.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pnl_Histogram.ResumeLayout(false);
             this.pnl_Tranformations.ResumeLayout(false);
             this.pnl_ContainerOptionTransformation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Morphology)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -404,15 +439,15 @@
 
         private System.Windows.Forms.OpenFileDialog ofd_OpenFile;
         private System.Windows.Forms.Button btn_AddImage;
-        private System.Windows.Forms.PictureBox picb_GLS;
-        private System.Windows.Forms.Button btn_GLS;
-        private System.Windows.Forms.PictureBox picb_Bit;
+        private System.Windows.Forms.PictureBox picb_Seg;
+        private System.Windows.Forms.Button btn_Seg;
+        private System.Windows.Forms.PictureBox picb_Tranf;
         private System.Windows.Forms.Button btn_Tranformations;
-        private System.Windows.Forms.PictureBox picb_Loga;
+        private System.Windows.Forms.PictureBox picb_Histo;
         private System.Windows.Forms.Button btn_Histogram;
-        private System.Windows.Forms.PictureBox picb_PLaw;
-        private System.Windows.Forms.Button btn_PLaw;
-        private System.Windows.Forms.PictureBox picb_btnIndex;
+        private System.Windows.Forms.PictureBox picb_Spatial;
+        private System.Windows.Forms.Button btn_Spatial;
+        private System.Windows.Forms.PictureBox picb_Index;
         private System.Windows.Forms.Button btn_Index;
         private System.Windows.Forms.PictureBox picb_ShowImage;
         private System.Windows.Forms.Panel pnl_Index;
@@ -428,5 +463,7 @@
         private System.Windows.Forms.Button btn_Logarithmic;
         private System.Windows.Forms.Button btn_Power;
         private System.Windows.Forms.Button btn_Negative;
+        private System.Windows.Forms.PictureBox picb_Morphology;
+        private System.Windows.Forms.Button btn_Morphology;
     }
 }
