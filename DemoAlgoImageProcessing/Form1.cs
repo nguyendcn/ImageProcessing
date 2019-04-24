@@ -55,9 +55,26 @@ namespace DemoAlgoImageProcessing
             }
         }
 
-        private void btn_Logarithmic_Click(object sender, EventArgs e)
+        private void Btn_Logarithmic_Click(object sender, EventArgs e)
         {
+            //Check is exists
+            bool isExist = false;
+            foreach (Control ctr in this.pnl_ContainerFuncTranformations.Controls)
+            {
+                if (ctr is UI.Tranformations.Logarithmic.Logarithmics)
+                {
+                    ctr.Visible = true;
+                    ctr.BringToFront();
+                    isExist = true;
+                }
+            }
 
+            if (!isExist)
+            {
+                UI.Tranformations.Logarithmic.Logarithmics logarithmics = new UI.Tranformations.Logarithmic.Logarithmics();
+                logarithmics.Dock = DockStyle.Fill;
+                this.pnl_ContainerFuncTranformations.Controls.Add(logarithmics);
+            }
         }
     }
 }

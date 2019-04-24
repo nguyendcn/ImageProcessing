@@ -15,6 +15,7 @@ namespace DemoAlgoImageProcessing.UI.Tranformations.Logarithmic
         public int c_1;
         public int c_2;
         public int c_3;
+        public bool isCancel = true;
 
         public InputForLogarit()
         {
@@ -26,6 +27,7 @@ namespace DemoAlgoImageProcessing.UI.Tranformations.Logarithmic
             this.c_1 = Convert.ToInt32(txt_C1.Text);
             this.c_2 = Convert.ToInt32(txt_C2.Text);
             this.c_3 = Convert.ToInt32(txt_C3.Text);
+            this.isCancel = false;
 
             this.Dispose();
             this.Close();
