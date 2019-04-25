@@ -321,6 +321,100 @@ namespace DemoAlgoImageProcessing
             }
         }
 
-        
+        private void btn_Spatial_Click(object sender, EventArgs e)
+        {
+            this.pnl_SpatialFilter.BringToFront();
+        }
+
+        private void btn_Min_Click(object sender, EventArgs e)
+        {
+            //Check is exist
+
+            //not exist
+            DialogResult dr = this.ofd_OpenFile.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                Bitmap bm_temp = new Bitmap(ofd_OpenFile.FileName);
+                bm_temp.RGB2GrayScale();
+
+                UI.SpatialFilter.Display display = new UI.SpatialFilter.Display(bm_temp, Handing.SpatialFilter.Define.Min);
+                display.Dock = DockStyle.Fill;
+                this.pnl_ContainerFuncSpatial.Controls.Add(display);
+                display.BringToFront();
+            }
+            
+        }
+
+        private void btn_MaxFilter_Click(object sender, EventArgs e)
+        {
+            //Check is exist
+
+            //not exist
+            DialogResult dr = this.ofd_OpenFile.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                Bitmap bm_temp = new Bitmap(ofd_OpenFile.FileName);
+                bm_temp.RGB2GrayScale();
+
+                UI.SpatialFilter.Display display = new UI.SpatialFilter.Display(bm_temp, Handing.SpatialFilter.Define.Max);
+                display.Dock = DockStyle.Fill;
+                this.pnl_ContainerFuncSpatial.Controls.Add(display);
+                display.BringToFront();
+            }
+        }
+
+        private void btn_MedianFilter_Click(object sender, EventArgs e)
+        {
+            //Check is exist
+
+            //not exist
+            DialogResult dr = this.ofd_OpenFile.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                Bitmap bm_temp = new Bitmap(ofd_OpenFile.FileName);
+                bm_temp.RGB2GrayScale();
+
+                UI.SpatialFilter.Display display = new UI.SpatialFilter.Display(bm_temp, Handing.SpatialFilter.Define.Median);
+                display.Dock = DockStyle.Fill;
+                this.pnl_ContainerFuncSpatial.Controls.Add(display);
+                display.BringToFront();
+            }
+        }
+
+        private void btn_AverageFilter_Click(object sender, EventArgs e)
+        {
+            //Check is exist
+
+            //not exist
+            DialogResult dr = this.ofd_OpenFile.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                Bitmap bm_temp = new Bitmap(ofd_OpenFile.FileName);
+                bm_temp.RGB2GrayScale();
+
+                UI.SpatialFilter.Display display = new UI.SpatialFilter.Display(bm_temp, Handing.SpatialFilter.Define.Average);
+                display.Dock = DockStyle.Fill;
+                this.pnl_ContainerFuncSpatial.Controls.Add(display);
+                display.BringToFront();
+            }
+        }
+
+        private void btn_AvgWeight_Click(object sender, EventArgs e)
+        {
+            //Check is exist
+
+            //not exist
+            DialogResult dr = this.ofd_OpenFile.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                Bitmap bm_temp = new Bitmap(ofd_OpenFile.FileName);
+                bm_temp.RGB2GrayScale();
+
+                UI.SpatialFilter.Display display = new UI.SpatialFilter.Display(bm_temp, Handing.SpatialFilter.Define.AvgWeight);
+                display.Dock = DockStyle.Fill;
+                this.pnl_ContainerFuncSpatial.Controls.Add(display);
+                display.BringToFront();
+            }
+        }
     }
 }

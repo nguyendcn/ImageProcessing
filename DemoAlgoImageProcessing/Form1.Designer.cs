@@ -44,6 +44,8 @@
             this.picb_ShowImage = new System.Windows.Forms.PictureBox();
             this.pnl_Index = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picb_Morphology = new System.Windows.Forms.PictureBox();
+            this.btn_Morphology = new System.Windows.Forms.Button();
             this.pnl_Histogram = new System.Windows.Forms.Panel();
             this.btn_ViewDemoHis = new System.Windows.Forms.Button();
             this.pnl_Tranformations = new System.Windows.Forms.Panel();
@@ -54,9 +56,17 @@
             this.btn_Logarithmic = new System.Windows.Forms.Button();
             this.btn_Power = new System.Windows.Forms.Button();
             this.btn_Negative = new System.Windows.Forms.Button();
+            this.pnl_SpatialFilter = new System.Windows.Forms.Panel();
+            this.pnl_ContainerFuncSpatial = new System.Windows.Forms.Panel();
+            this.pnl_ContainerOptionSpatial = new System.Windows.Forms.Panel();
+            this.btn_Min = new System.Windows.Forms.Button();
+            this.btn_MaxFilter = new System.Windows.Forms.Button();
+            this.btn_MedianFilter = new System.Windows.Forms.Button();
+            this.btn_AverageFilter = new System.Windows.Forms.Button();
+            this.btn_AvgWeight = new System.Windows.Forms.Button();
+            this.btn_LaplacianFilter = new System.Windows.Forms.Button();
+            this.btn_SobelFilter = new System.Windows.Forms.Button();
             this.demoHistogram = new DemoAlgoImageProcessing.UI.ViewHistogramDemo();
-            this.picb_Morphology = new System.Windows.Forms.PictureBox();
-            this.btn_Morphology = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picb_Seg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_Tranf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_Histo)).BeginInit();
@@ -65,10 +75,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.picb_ShowImage)).BeginInit();
             this.pnl_Index.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Morphology)).BeginInit();
             this.pnl_Histogram.SuspendLayout();
             this.pnl_Tranformations.SuspendLayout();
             this.pnl_ContainerOptionTransformation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picb_Morphology)).BeginInit();
+            this.pnl_SpatialFilter.SuspendLayout();
+            this.pnl_ContainerOptionSpatial.SuspendLayout();
             this.SuspendLayout();
             // 
             // ofd_OpenFile
@@ -196,6 +208,7 @@
             this.btn_Spatial.Text = "Spatial Filter";
             this.btn_Spatial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Spatial.UseVisualStyleBackColor = false;
+            this.btn_Spatial.Click += new System.EventHandler(this.btn_Spatial_Click);
             // 
             // picb_Index
             // 
@@ -269,6 +282,33 @@
             this.panel1.Size = new System.Drawing.Size(106, 588);
             this.panel1.TabIndex = 9;
             // 
+            // picb_Morphology
+            // 
+            this.picb_Morphology.BackColor = System.Drawing.Color.Transparent;
+            this.picb_Morphology.Location = new System.Drawing.Point(2, 349);
+            this.picb_Morphology.Name = "picb_Morphology";
+            this.picb_Morphology.Size = new System.Drawing.Size(10, 56);
+            this.picb_Morphology.TabIndex = 16;
+            this.picb_Morphology.TabStop = false;
+            // 
+            // btn_Morphology
+            // 
+            this.btn_Morphology.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Morphology.CausesValidation = false;
+            this.btn_Morphology.FlatAppearance.BorderSize = 0;
+            this.btn_Morphology.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Morphology.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Morphology.ForeColor = System.Drawing.Color.White;
+            this.btn_Morphology.Image = ((System.Drawing.Image)(resources.GetObject("btn_Morphology.Image")));
+            this.btn_Morphology.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Morphology.Location = new System.Drawing.Point(12, 349);
+            this.btn_Morphology.Name = "btn_Morphology";
+            this.btn_Morphology.Size = new System.Drawing.Size(94, 56);
+            this.btn_Morphology.TabIndex = 15;
+            this.btn_Morphology.Text = "Morphology";
+            this.btn_Morphology.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Morphology.UseVisualStyleBackColor = false;
+            // 
             // pnl_Histogram
             // 
             this.pnl_Histogram.Controls.Add(this.btn_ViewDemoHis);
@@ -295,9 +335,9 @@
             this.pnl_Tranformations.Controls.Add(this.pnl_ContainerFuncTranformations);
             this.pnl_Tranformations.Controls.Add(this.pnl_ContainerOptionTransformation);
             this.pnl_Tranformations.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Tranformations.Location = new System.Drawing.Point(106, 0);
+            this.pnl_Tranformations.Location = new System.Drawing.Point(0, 0);
             this.pnl_Tranformations.Name = "pnl_Tranformations";
-            this.pnl_Tranformations.Size = new System.Drawing.Size(934, 588);
+            this.pnl_Tranformations.Size = new System.Drawing.Size(1040, 588);
             this.pnl_Tranformations.TabIndex = 3;
             // 
             // pnl_ContainerFuncTranformations
@@ -306,7 +346,7 @@
             this.pnl_ContainerFuncTranformations.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_ContainerFuncTranformations.Location = new System.Drawing.Point(0, 47);
             this.pnl_ContainerFuncTranformations.Name = "pnl_ContainerFuncTranformations";
-            this.pnl_ContainerFuncTranformations.Size = new System.Drawing.Size(934, 541);
+            this.pnl_ContainerFuncTranformations.Size = new System.Drawing.Size(1040, 541);
             this.pnl_ContainerFuncTranformations.TabIndex = 1;
             // 
             // pnl_ContainerOptionTransformation
@@ -319,7 +359,7 @@
             this.pnl_ContainerOptionTransformation.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_ContainerOptionTransformation.Location = new System.Drawing.Point(0, 0);
             this.pnl_ContainerOptionTransformation.Name = "pnl_ContainerOptionTransformation";
-            this.pnl_ContainerOptionTransformation.Size = new System.Drawing.Size(934, 47);
+            this.pnl_ContainerOptionTransformation.Size = new System.Drawing.Size(1040, 47);
             this.pnl_ContainerOptionTransformation.TabIndex = 0;
             // 
             // btn_Gray_Level_Slicing
@@ -372,6 +412,117 @@
             this.btn_Negative.UseVisualStyleBackColor = true;
             this.btn_Negative.Click += new System.EventHandler(this.btn_Negative_Click);
             // 
+            // pnl_SpatialFilter
+            // 
+            this.pnl_SpatialFilter.BackColor = System.Drawing.SystemColors.Control;
+            this.pnl_SpatialFilter.Controls.Add(this.pnl_ContainerFuncSpatial);
+            this.pnl_SpatialFilter.Controls.Add(this.pnl_ContainerOptionSpatial);
+            this.pnl_SpatialFilter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_SpatialFilter.Location = new System.Drawing.Point(106, 0);
+            this.pnl_SpatialFilter.Name = "pnl_SpatialFilter";
+            this.pnl_SpatialFilter.Size = new System.Drawing.Size(934, 588);
+            this.pnl_SpatialFilter.TabIndex = 3;
+            // 
+            // pnl_ContainerFuncSpatial
+            // 
+            this.pnl_ContainerFuncSpatial.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnl_ContainerFuncSpatial.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_ContainerFuncSpatial.Location = new System.Drawing.Point(0, 51);
+            this.pnl_ContainerFuncSpatial.Name = "pnl_ContainerFuncSpatial";
+            this.pnl_ContainerFuncSpatial.Size = new System.Drawing.Size(934, 537);
+            this.pnl_ContainerFuncSpatial.TabIndex = 1;
+            // 
+            // pnl_ContainerOptionSpatial
+            // 
+            this.pnl_ContainerOptionSpatial.BackColor = System.Drawing.SystemColors.Control;
+            this.pnl_ContainerOptionSpatial.Controls.Add(this.btn_SobelFilter);
+            this.pnl_ContainerOptionSpatial.Controls.Add(this.btn_LaplacianFilter);
+            this.pnl_ContainerOptionSpatial.Controls.Add(this.btn_AvgWeight);
+            this.pnl_ContainerOptionSpatial.Controls.Add(this.btn_AverageFilter);
+            this.pnl_ContainerOptionSpatial.Controls.Add(this.btn_MedianFilter);
+            this.pnl_ContainerOptionSpatial.Controls.Add(this.btn_MaxFilter);
+            this.pnl_ContainerOptionSpatial.Controls.Add(this.btn_Min);
+            this.pnl_ContainerOptionSpatial.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_ContainerOptionSpatial.Location = new System.Drawing.Point(0, 0);
+            this.pnl_ContainerOptionSpatial.Name = "pnl_ContainerOptionSpatial";
+            this.pnl_ContainerOptionSpatial.Size = new System.Drawing.Size(934, 51);
+            this.pnl_ContainerOptionSpatial.TabIndex = 0;
+            // 
+            // btn_Min
+            // 
+            this.btn_Min.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Min.Location = new System.Drawing.Point(120, 7);
+            this.btn_Min.Name = "btn_Min";
+            this.btn_Min.Size = new System.Drawing.Size(78, 32);
+            this.btn_Min.TabIndex = 0;
+            this.btn_Min.Text = "Min";
+            this.btn_Min.UseVisualStyleBackColor = true;
+            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
+            // 
+            // btn_MaxFilter
+            // 
+            this.btn_MaxFilter.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_MaxFilter.Location = new System.Drawing.Point(219, 7);
+            this.btn_MaxFilter.Name = "btn_MaxFilter";
+            this.btn_MaxFilter.Size = new System.Drawing.Size(78, 32);
+            this.btn_MaxFilter.TabIndex = 1;
+            this.btn_MaxFilter.Text = "Max";
+            this.btn_MaxFilter.UseVisualStyleBackColor = true;
+            this.btn_MaxFilter.Click += new System.EventHandler(this.btn_MaxFilter_Click);
+            // 
+            // btn_MedianFilter
+            // 
+            this.btn_MedianFilter.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_MedianFilter.Location = new System.Drawing.Point(315, 7);
+            this.btn_MedianFilter.Name = "btn_MedianFilter";
+            this.btn_MedianFilter.Size = new System.Drawing.Size(78, 32);
+            this.btn_MedianFilter.TabIndex = 2;
+            this.btn_MedianFilter.Text = "Median";
+            this.btn_MedianFilter.UseVisualStyleBackColor = true;
+            this.btn_MedianFilter.Click += new System.EventHandler(this.btn_MedianFilter_Click);
+            // 
+            // btn_AverageFilter
+            // 
+            this.btn_AverageFilter.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AverageFilter.Location = new System.Drawing.Point(411, 7);
+            this.btn_AverageFilter.Name = "btn_AverageFilter";
+            this.btn_AverageFilter.Size = new System.Drawing.Size(78, 32);
+            this.btn_AverageFilter.TabIndex = 3;
+            this.btn_AverageFilter.Text = "Average";
+            this.btn_AverageFilter.UseVisualStyleBackColor = true;
+            this.btn_AverageFilter.Click += new System.EventHandler(this.btn_AverageFilter_Click);
+            // 
+            // btn_AvgWeight
+            // 
+            this.btn_AvgWeight.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AvgWeight.Location = new System.Drawing.Point(519, 7);
+            this.btn_AvgWeight.Name = "btn_AvgWeight";
+            this.btn_AvgWeight.Size = new System.Drawing.Size(78, 32);
+            this.btn_AvgWeight.TabIndex = 4;
+            this.btn_AvgWeight.Text = "Avg Weight";
+            this.btn_AvgWeight.UseVisualStyleBackColor = true;
+            this.btn_AvgWeight.Click += new System.EventHandler(this.btn_AvgWeight_Click);
+            // 
+            // btn_LaplacianFilter
+            // 
+            this.btn_LaplacianFilter.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LaplacianFilter.Location = new System.Drawing.Point(627, 7);
+            this.btn_LaplacianFilter.Name = "btn_LaplacianFilter";
+            this.btn_LaplacianFilter.Size = new System.Drawing.Size(78, 32);
+            this.btn_LaplacianFilter.TabIndex = 5;
+            this.btn_LaplacianFilter.Text = "Laplacian";
+            this.btn_LaplacianFilter.UseVisualStyleBackColor = true;
+            // 
+            // btn_SobelFilter
+            // 
+            this.btn_SobelFilter.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SobelFilter.Location = new System.Drawing.Point(724, 7);
+            this.btn_SobelFilter.Name = "btn_SobelFilter";
+            this.btn_SobelFilter.Size = new System.Drawing.Size(78, 32);
+            this.btn_SobelFilter.TabIndex = 6;
+            this.btn_SobelFilter.Text = "Sobel";
+            this.btn_SobelFilter.UseVisualStyleBackColor = true;
+            // 
             // demoHistogram
             // 
             this.demoHistogram.Location = new System.Drawing.Point(3, 12);
@@ -381,40 +532,14 @@
             this.demoHistogram.Visible = false;
             this.demoHistogram.Load += new System.EventHandler(this.demoHistogram_Load);
             // 
-            // picb_Morphology
-            // 
-            this.picb_Morphology.BackColor = System.Drawing.Color.Transparent;
-            this.picb_Morphology.Location = new System.Drawing.Point(2, 349);
-            this.picb_Morphology.Name = "picb_Morphology";
-            this.picb_Morphology.Size = new System.Drawing.Size(10, 56);
-            this.picb_Morphology.TabIndex = 16;
-            this.picb_Morphology.TabStop = false;
-            // 
-            // btn_Morphology
-            // 
-            this.btn_Morphology.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Morphology.CausesValidation = false;
-            this.btn_Morphology.FlatAppearance.BorderSize = 0;
-            this.btn_Morphology.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Morphology.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Morphology.ForeColor = System.Drawing.Color.White;
-            this.btn_Morphology.Image = ((System.Drawing.Image)(resources.GetObject("btn_Morphology.Image")));
-            this.btn_Morphology.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Morphology.Location = new System.Drawing.Point(12, 349);
-            this.btn_Morphology.Name = "btn_Morphology";
-            this.btn_Morphology.Size = new System.Drawing.Size(94, 56);
-            this.btn_Morphology.TabIndex = 15;
-            this.btn_Morphology.Text = "Morphology";
-            this.btn_Morphology.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Morphology.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 588);
-            this.Controls.Add(this.pnl_Tranformations);
+            this.Controls.Add(this.pnl_SpatialFilter);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl_Tranformations);
             this.Controls.Add(this.pnl_Index);
             this.Controls.Add(this.pnl_Histogram);
             this.Name = "Form1";
@@ -427,10 +552,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.picb_ShowImage)).EndInit();
             this.pnl_Index.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picb_Morphology)).EndInit();
             this.pnl_Histogram.ResumeLayout(false);
             this.pnl_Tranformations.ResumeLayout(false);
             this.pnl_ContainerOptionTransformation.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picb_Morphology)).EndInit();
+            this.pnl_SpatialFilter.ResumeLayout(false);
+            this.pnl_ContainerOptionSpatial.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -455,6 +582,7 @@
         private System.Windows.Forms.Panel pnl_Histogram;
         private System.Windows.Forms.Panel pnl_Tranformations;
         private System.Windows.Forms.Button btn_ViewDemoHis;
+        private System.Windows.Forms.Panel pnl_SpatialFilter;
         private UI.ViewHistogramDemo demoHistogram;
         private System.Windows.Forms.Panel pnl_ContainerOptionTransformation;
         private System.Windows.Forms.Panel pnl_ContainerFuncTranformations;
@@ -465,5 +593,14 @@
         private System.Windows.Forms.Button btn_Negative;
         private System.Windows.Forms.PictureBox picb_Morphology;
         private System.Windows.Forms.Button btn_Morphology;
+        private System.Windows.Forms.Panel pnl_ContainerFuncSpatial;
+        private System.Windows.Forms.Panel pnl_ContainerOptionSpatial;
+        private System.Windows.Forms.Button btn_Min;
+        private System.Windows.Forms.Button btn_SobelFilter;
+        private System.Windows.Forms.Button btn_LaplacianFilter;
+        private System.Windows.Forms.Button btn_AvgWeight;
+        private System.Windows.Forms.Button btn_AverageFilter;
+        private System.Windows.Forms.Button btn_MedianFilter;
+        private System.Windows.Forms.Button btn_MaxFilter;
     }
 }
